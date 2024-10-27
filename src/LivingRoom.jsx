@@ -1,7 +1,7 @@
 import React from 'react'
 import one from "./assets/one.png"
 import two from "./assets/two.png"
-import third from "./assets/third.png"
+import third from "./assets/Third.png"
 import arrow from "./assets/arrow-right.png"
 
 function LivingRoom() {
