@@ -1,42 +1,10 @@
 import React from 'react'
 import theme from "./assets/Paste.png"
-import mob from "./assets/mob.png"
+import mob from "./assets/Mob.png"
 
 export default function HeaderChild() {
   return (
     <>
-
-    
-    {/* <div className='h-[60px] w-[80%]  flex justify-between'> */}
-
-        {/* logo */}
-        {/* <div className='flex justify-center items-center'> */}
-            {/* <h1 className="font-semibold md:text-2xl">3legant.</h1> */}
-        {/* </div> */}
-
-        {/* links */}
-        {/* <div  className='flex justify-center items-center'>
-
-            <ul className='flex justify-center items-center gap-8'>
-                <li>Home</li>
-                <li>Shop</li>
-                <li>Contact</li>
-                <li>Product </li>
-            </ul>
-        </div> */}
-
-         {/* icons */}
-        {/* <div  className='flex justify-center items-center gap-2'>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-        </div>
-    </div> */}
-    
-
-
-
     {/* 2nd section */}
 
     <div className='w-full flex flex-col items-center'>
