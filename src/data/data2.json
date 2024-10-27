@@ -1,0 +1,25 @@
+[
+
+
+    {
+        "icon":"/vectors/Bus.png",
+        "service":"Free Shipping",
+        "price":"Order above $200"
+    },
+    {
+        "icon":"/vectors/Rect.png",
+        "service":"Money-back",
+        "price":"30 days guarantee"
+    },
+    {
+        "icon":"/vectors/Vector.png",
+        "service":"Secure Payments",
+        "price":"Secured by Stripe"
+    },
+    {
+        "icon":"/vectors/Phone.png",
+        "service":"24/7 Support",
+        "price":"Phone and Email support"
+    }
+
+]

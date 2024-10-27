@@ -1,0 +1,92 @@
+[
+{
+    "label1":"New",
+    "label2":"-50%",
+    "name":"Loveseat Sofa",
+    "price":199.00,
+    "image":"public/assets/sofa.png"
+
+},
+{
+    "label1":"New",
+    "label2":"-40%",
+    "name":"Table Lamp",
+    "price":50.00,
+    "image":"/assets/bulb.png"
+
+},
+{
+    "label1":"New",
+    "label2":"-30%",
+    "name":"Beige Table Lamp",
+    "price":100.00,
+    "image":"public/assets/lamp.png"
+
+},
+{
+    "label1":"New",
+    "label2":"-35%",
+    "name":"Bambo Basket",
+    "price":99.00,
+    "image":"public/assets/basket.png"
+
+},
+{
+    "label1":"New",
+    "label2":"-10%",
+    "name":"Toasted",
+    "price":40.00,
+    "image":"public/assets/Third.png"
+
+},
+{
+    "label1":"New",
+    "label2":"-80%",
+    "name":"Loveseat Sofa",
+    "price":60.00,
+    "image":"public/assets/one.png"
+
+},
+{
+    "label1":"New",
+    "label2":"-50%",
+    "name":"Loveseat Sofa",
+    "price":199.00,
+    "image":"public/assets/two.png"
+
+},
+{
+    "label1":"New",
+    "label2":"-50%",
+    "name":"Loveseat Sofa",
+    "price":199.00,
+    "image":"public/assets/one.png"
+
+},
+{
+    "label1":"New",
+    "label2":"-50%",
+    "name":"Loveseat Sofa",
+    "price":199.00,
+    "image":"public/assets/two.png"
+
+},
+{
+    "label1":"New",
+    "label2":"-50%",
+    "name":"Loveseat Sofa",
+    "price":199.00,
+    "image":"public/assets/one.png"
+
+},
+{
+    "label1":"New",
+    "label2":"-50%",
+    "name":"Loveseat Sofa",
+    "price":199.00,
+    "image":"public/assets/two.png"
+
+}
+
+
+]
