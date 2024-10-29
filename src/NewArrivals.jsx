@@ -1,22 +1,23 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import arrow from "./assets/arrow-right.png"
-import sofa from "./assets/sofa.png"
+import sofa from "./assets/sofa.png"    
 import star from "./assets/Star.png"
 import heart from "./assets/heart.png"
+import { cartItemsContext } from './App'
 
 //  importing json
-
 import data from "./data/data.json";
+
+
 
 export default function NewArrivals() {
 
 
+    const {CartItems,setCartItems}=useContext(cartItemsContext);
     const[Mydata,setMydata]=useState([])
-
+    console.log(CartItems);
 
     useEffect(()=>{
-
-        
         setMydata(data);
     },[])
 
@@ -74,7 +75,18 @@ export default function NewArrivals() {
 
                         {/* button */}
 
-                        <button className='w-10/12 h-[46px] rounded-lg bg-[#141718] inter md:text-base md:leading-7  text-white md:font-medium relative top-[287px]'>Add to cart</button>
+                        <button className='w-10/12 h-[46px] rounded-lg bg-[#141718] inter md:text-base md:leading-7  text-white md:font-medium relative top-[287px]'
+                        
+                        onClick={()=>{
+                            setCartItems((prev)=>([...prev,
+                                {name:product.name,
+                                 url:product.image,
+                                 price:product.price
+
+                            }]))
+                        }}
+
+                        >Add to cart</button>
 
 
 

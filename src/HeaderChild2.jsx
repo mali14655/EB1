@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,createContext,Provider} from 'react'
 import acc from "./assets/vectors2/vector1.png"
 import rec from "./assets/vectors2/Rec.png"
 import notf from "./assets/vectors2/not.png"
@@ -6,18 +6,23 @@ import menu from "./assets/vectors2/Vector.png"
 import cross from "./assets/vectors2/Shape.png"
 import srch from "./assets/vectors/srch.png"
 import heart from "./assets/heart.png"
+import Cart from './Cart'
 
 
+export const mycontext=createContext();
 
-export default function HeaderChild2() {
+
+function HeaderChild2() {
 
     const [decision,setdecision]=useState(false);
-    console.log(decision)
+
+    // forCart
+    const[InOut,setInOut]=useState("slideout");
 
   return (
-    <>
-
-    <div className='w-full flex justify-center py-3 items-center'>
+    <mycontext.Provider value={{InOut,setInOut}} >
+    <Cart/>
+    <div className='w-full flex justify-center py-3 items-center bg-white sticky z-10 top-0'>
         <div className='w-[80%] flex justify-between'>
             <div className='flex items-center gap-2 relative'>
                     <img src={menu} className='inline md:hidden' onClick={()=>{
@@ -110,8 +115,15 @@ export default function HeaderChild2() {
                 <div className='hidden md:block'>
                 <img src={acc} className='inline' alt="" />
                 </div>
-                <div>
-                <img src={rec} className='inline' alt="" />
+                <div className=''>
+                <button
+                className='relative'
+                onClick={()=>{
+                    setInOut("slideIn")
+                }}
+                >
+                    
+                <img src={rec} className='inline h-[22px] w-[22px] rounded-[50%]' alt="" /></button>
                 </div>
                 <div className='relative inline  '>
                 <img src={notf} alt="" className='inline  ' />
@@ -125,6 +137,9 @@ export default function HeaderChild2() {
     
     
     
-    </>
+    </mycontext.Provider>
   )
 }
+
+
+export default React.memo(HeaderChild2);
