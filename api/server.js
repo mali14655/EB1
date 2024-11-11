@@ -30,7 +30,7 @@ app.post('/create-payment-intent', async (req, res) => {
 });
 
 // Start the server
-const port = 3010; // You can change the port if needed
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
-});
+// const port = 3010; // You can change the port if needed
+// app.listen(port, () => {
+  // console.log(`Server running on http://localhost:${port}`);
+// });

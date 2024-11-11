@@ -13,7 +13,7 @@ export default function CheckOut() {
     
     useEffect(() => {
         // This is where you send the cart total to your backend
-        fetch('http://localhost:3010/create-payment-intent', {
+        fetch('https://eb-1-j3vt.vercel.app/api/server', {
           method: 'POST',
           body: JSON.stringify({ amount:total*100 }), // Example: Pass the amount in cents (e.g., $20.00)
           headers: {
