@@ -1,13 +1,17 @@
-import React, { useContext, useEffect, useState} from 'react'
+import React, { useContext, useEffect, useState,createContext} from 'react'
 import cross from "./assets/vectors2/Shape.png"
 import img from "../src/images/img.png"
 import {mycontext} from "./HeaderChild2"
 import { cartItemsContext } from './App'
+import CheckOut from './CheckOut'
+
+export const amountcontext=createContext();
 
 function Cart() {
      
     const {CartItems,setCartItems}=useContext(cartItemsContext);
     const [total,settotal]=useState(0);
+    const [show,setshow]=useState(false);
     const {InOut='SlideOut',setInOut=()=>{}}=useContext(mycontext) || {};
 
 
@@ -27,7 +31,8 @@ function Cart() {
 
 
   return (
-<>
+<amountcontext.Provider value={{total,show,setshow}}>
+    {show&&<CheckOut/>}
 <div className={`${InOut} w-[90%] md:w-[400px] md:h-[1024px] bg-white h-[100vh]  z-20 px-4 py-5 cart`}>
 
 {/* 1st */}
@@ -98,7 +103,10 @@ function Cart() {
 </div>
 
 <div className='w-full'>
-    <button className='py-3 bg-black w-full text-white rounded'>Checkout</button>
+    <button className='py-3 bg-black w-full text-white rounded' onClick={()=>{
+        setshow(true);
+        setInOut("slideOut")
+    }} >Checkout</button>
 </div>
 
 </div>
@@ -106,7 +114,7 @@ function Cart() {
 
 
 </div>
-</>
+</amountcontext.Provider>
   )
 }
 

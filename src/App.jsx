@@ -11,6 +11,17 @@ import Join from './Join'
 import Footer from './Footer'
 import HeaderChild2 from './HeaderChild2'
 import Cart from './Cart'
+import CheckOut from './CheckOut'
+
+// stripe 
+
+import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
+
+const stripePromise = loadStripe('pk_test_51QJt9FFadvgEyax9io1vn8kwWZtQ6S8jtY3ahoughVaqMmBFUDksi4N3ZfuH4nw5Jzgx01nSIq4DxxuLwuNwx5QX00wAoeyevW');
+
+
+
 
 export const cartItemsContext=createContext();
 
@@ -40,6 +51,10 @@ export default function App() {
    })
 
   return (
+
+    <Elements stripe={stripePromise}>
+
+
 <cartItemsContext.Provider value={{CartItems,setCartItems}}>
 {/* <Cart/> */}
 {decision || <HeaderChild2/> }
@@ -53,8 +68,10 @@ export default function App() {
 <Articles/>
 <Join/>
 <Footer/>
+{/* <CheckOut/> */}
 {/* <SignUp></SignUp> */}
 
 </cartItemsContext.Provider>
+</Elements>
   )
 }
