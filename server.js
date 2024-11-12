@@ -1,11 +1,14 @@
 // server.js
 import express from 'express';
 import cors from 'cors';
+require('dotenv').config();
+
 
 import Stripe from 'stripe';  // Use ES Modules import
 
 const stripe = Stripe('sk_test_51QJt9FFadvgEyax9NC8HZokdE6hh7fMJRaverOKM5BlujEswwDpJoR8ytAqRZpe3onx1655ODeQUOnBNMWlWE3fa00y8a6350f');  // Initialize Stripe
 const app = express();
+const port = process.env.PORT || 3010; // You can change the port if needed
 
 app.use(cors()); // Allow all origins (or restrict it to specific ones)
 // Middleware to parse JSON bodies
@@ -30,7 +33,6 @@ app.post('/create-payment-intent', async (req, res) => {
 });
 
 // Start the server
-// const port = 3010; // You can change the port if needed
-// app.listen(port, () => {
-  // console.log(`Server running on http://localhost:${port}`);
-// });
+app.listen(port, () => {
+  console.log(`Server running on http://localhost:${port}`);
+});
