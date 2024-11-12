@@ -3,6 +3,8 @@ import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { amountcontext } from './Cart';
 
 
+
+
 export default function CheckOut() {
     const stripe = useStripe();
     const elements = useElements();
@@ -13,7 +15,7 @@ export default function CheckOut() {
     
     useEffect(() => {
         // This is where you send the cart total to your backend
-        fetch('https://eb-1-cmec.vercel.app//create-payment-intent', {
+        fetch('https://ecom-app-psi.vercel.app/create-payment-intent', {
           method: 'POST',
           body: JSON.stringify({ amount:total*100 }), // Example: Pass the amount in cents (e.g., $20.00)
           headers: {
